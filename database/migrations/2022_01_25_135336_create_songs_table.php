@@ -19,7 +19,7 @@ class CreateSongsTable extends Migration
             $table->foreignId('album_id')->nullable();
             $table->string('title');
             $table->text('lyrics');
-            $table->string('artists_featuring');
+            $table->string('artists_featuring')->nullable();
         });
     }
 
