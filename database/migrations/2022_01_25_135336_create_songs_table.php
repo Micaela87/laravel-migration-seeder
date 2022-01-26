@@ -15,11 +15,12 @@ class CreateSongsTable extends Migration
     {
         Schema::create('songs', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('main_artist_id');
-            $table->foreignId('album_id')->nullable();
+            // $table->foreignId('main_artist_id');
+            // $table->foreignId('album_id')->nullable();
             $table->string('title');
             $table->text('lyrics');
             $table->string('artists_featuring')->nullable();
+            $table->timestamps();
         });
     }
 
